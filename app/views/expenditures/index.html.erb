@@ -1,0 +1,29 @@
+<h1>All Items</h1>
+
+<table>
+
+	<tr>
+    <th>Name</th>
+
+    <th colspan="3">Price</th>
+   
+  	</tr>
+
+<% @expenditures.each do |expenditure| %>
+
+	<tr>
+		<td><%= expenditure.name %></td>
+		<td><%= expenditure.price %></td>
+		<td><%= link_to "SHOW", expenditure_path(expenditure)%></td>	
+	</tr>
+<% end %>
+</table>
+
+<p>
+ <st>Total Price</st>
+ <% total_price=0 %>
+ <% @expenditures.each do |expenditure| %>
+ <% total_price +=expenditure.price %>
+ <%end %>
+ <%=total_price %>
+</p>

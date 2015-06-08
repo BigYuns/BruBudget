@@ -5,3 +5,5 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Expenditure.delete_all 
+Expenditure.create! name:"Tomatoes", price: 10, number: 3, purpose: "eat healthy"
